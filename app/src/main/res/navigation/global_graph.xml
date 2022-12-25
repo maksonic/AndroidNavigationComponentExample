@@ -2,12 +2,12 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/global_graph"
-    app:startDestination="@id/startFragment">
+    app:startDestination="@id/mainFragment">
 
     <fragment
         android:id="@+id/startFragment"
         android:name="ru.maksonic.bottomnavigationexample.StartFragment"
-        android:label="StartFragment" >
+        android:label="StartFragment">
         <action
             android:id="@+id/action_startFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
@@ -15,7 +15,7 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="ru.maksonic.bottomnavigationexample.MainFragment"
-        android:label="MainFragment" >
+        android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
@@ -26,7 +26,7 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="ru.maksonic.bottomnavigationexample.SettingsFragment"
-        android:label="SettingsFragment" >
+        android:label="SettingsFragment">
         <action
             android:id="@+id/action_settingsFragment_to_startFragment"
             app:destination="@id/startFragment" />

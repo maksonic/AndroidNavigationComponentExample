@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import ru.maksonic.bottomnavigationexample.databinding.FragmentMainBinding
 
 /**
@@ -33,23 +34,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
     }
 
     private fun initBottomNavigation() {
-        binding.bottomNavBar.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.first_graph -> {
-                    navController.setGraph(R.navigation.first_graph)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.second_graph -> {
-                    navController.setGraph(R.navigation.second_graph)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.third_graph -> {
-                    navController.setGraph(R.navigation.third_graph)
-                    return@setOnItemSelectedListener true
-                }
-                else -> return@setOnItemSelectedListener false
-            }
-        }
+        NavigationUI.setupWithNavController(binding.bottomNavBar, navController)
     }
 
     private fun initToolbar() {
