@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/first_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="ru.maksonic.bottomnavigationexample.bottom_items.first.FirstFragment"
+        android:label="FirstFragment" >
+        <action
+            android:id="@+id/action_firstFragment_to_firstInnerFragment"
+            app:destination="@id/firstInnerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstInnerFragment"
+        android:name="ru.maksonic.bottomnavigationexample.bottom_items.first.FirstInnerFragment"
+        android:label="FirstInnerFragment" >
+        <action
+            android:id="@+id/action_firstInnerFragment_to_start"
+            app:destination="@id/global_graph" />
+    </fragment>
+
+</navigation>
